@@ -1,6 +1,10 @@
 import express from "express";
 import cors from "cors";
 import connectDB from "./config/db";
+import authRoutes from "./routes/authRoutes";
+import bookRoutes from "./routes/bookRoutes";
+import borrowRoutes from "./routes/borrowRoutes";
+import contactRoutes from "./routes/contactRoutes";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -14,6 +18,10 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+app.use("/api/auth", authRoutes);
+app.use("/api/books", bookRoutes);
+app.use("/api/borrows", borrowRoutes);
+app.use("/api/contact", contactRoutes);
 
 // Connexion à MongoDB
 connectDB();
