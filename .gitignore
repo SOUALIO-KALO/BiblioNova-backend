@@ -1,6 +1,5 @@
 # Node.js and general project files to ignore
 node_modules
 dist
-dist-ssr
-*.local
+.env
 
