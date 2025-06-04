@@ -4,7 +4,7 @@ import axios from "axios";
 const formatBook = (item: any) => ({
   bookId: item.id,
   title: item.volumeInfo.title,
-  author: item.volumeInfo.authors?.join(", ") || "Auteur inconnu",
+  authors: item.volumeInfo.authors?.join(", ") || "Auteur inconnu",
   description: item.volumeInfo.description || "",
   imageUrl: item.volumeInfo.imageLinks?.thumbnail || "",
   pageCount: item.volumeInfo.pageCount || 0,
