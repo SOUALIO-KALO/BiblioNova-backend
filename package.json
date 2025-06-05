@@ -7,9 +7,10 @@
   "type": "commonjs",
   "main": "server.ts",
   "scripts": {
-    "start": "node dist/server.js",
+    "start": "node dist/server.ts",
     "dev": "nodemon src/server.ts",
     "build": "tsc",
+    "postinstall": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
